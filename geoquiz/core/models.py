@@ -48,8 +48,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
 
 
-class Item(models.Model):
-    "Item object."
+class Sfide(models.Model):
+    "Sfide object."
     name = models.CharField(max_length=255)
     difficulty = models.IntegerField()
 

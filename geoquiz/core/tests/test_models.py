@@ -56,14 +56,14 @@ class ModelTests(TestCase):
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
 
-    def test_create_item(self):
-        """Test creating an item is successful."""
+    def test_create_sfide(self):
+        """Test creating a sfida is successful."""
 
-        item = models.Item.objects.create(
+        sfide = models.Sfide.objects.create(
 
             name='Sample item name',
             difficulty=5,
 
         )
 
-        self.assertEqual(str(item), item.title)
+        self.assertEqual(str(sfide), sfide.name)
