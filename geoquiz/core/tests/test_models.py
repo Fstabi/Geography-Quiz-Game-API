@@ -2,12 +2,11 @@
 Tests for models.
 """
 # from unittest.mock import patch
-# from decimal import Decimal
 
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
-# from core import models
+from core import models
 
 
 # def create_user(email='user@example.com', password='testpass123'):
@@ -56,3 +55,15 @@ class ModelTests(TestCase):
 
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
+
+    def test_create_item(self):
+        """Test creating an item is successful."""
+
+        item = models.Item.objects.create(
+
+            name='Sample item name',
+            difficulty=5,
+
+        )
+
+        self.assertEqual(str(item), item.title)
