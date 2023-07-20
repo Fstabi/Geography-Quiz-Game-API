@@ -55,7 +55,11 @@ class Sfide(models.Model):
 
     def __str__(self):
         return self.name
-        # method to provide a human-readable representation of the level when it is displayed in the Django admin or in other contexts.
+        """
+        method to provide a human-readable representation
+        of the level when it is displayed in the Django
+        admin or in other contexts.
+        """
 
 
 class Level(models.Model):
@@ -65,4 +69,3 @@ class Level(models.Model):
 
     def __str__(self):
         return self.name
-        # method to provide a human-readable representation of the level when it is displayed in the Django admin or in other contexts.

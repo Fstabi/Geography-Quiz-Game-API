@@ -11,5 +11,5 @@ class SfideSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sfide
-        fields = ['id', 'name', 'difficulty',]
+        fields = ['id', 'name', 'difficulty', ]
         read_only_fields = ['id']
