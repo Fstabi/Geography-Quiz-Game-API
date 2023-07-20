@@ -3,9 +3,7 @@ Serializers for Sfide APIs
 """
 from rest_framework import serializers
 
-from core.models import (
-    Sfide,
-)
+from core.models import Sfide
 
 
 class SfideSerializer(serializers.ModelSerializer):
@@ -13,7 +11,5 @@ class SfideSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sfide
-        fields = [
-            'id', 'name', 'difficulty',
-        ]
+        fields = ['id', 'name', 'difficulty',]
         read_only_fields = ['id']

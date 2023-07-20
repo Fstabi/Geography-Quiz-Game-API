@@ -55,3 +55,14 @@ class Sfide(models.Model):
 
     def __str__(self):
         return self.name
+        # method to provide a human-readable representation of the level when it is displayed in the Django admin or in other contexts.
+
+
+class Level(models.Model):
+    """Model representing a level in the game."""
+
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+        # method to provide a human-readable representation of the level when it is displayed in the Django admin or in other contexts.
