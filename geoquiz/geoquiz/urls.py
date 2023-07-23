@@ -15,4 +15,5 @@ urlpatterns = [
     ),
     path('user/', include('user.urls')),
     path('levels/', include('levels.urls')),
+    path('categories/', include('categories.urls'))
 ]

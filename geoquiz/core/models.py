@@ -69,3 +69,12 @@ class Level(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Categories(models.Model):
+    """Model representing a category."""
+
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'user',
     'sfide',
+    'levels',
+    'categories'
 ]
 
 MIDDLEWARE = [
