@@ -48,10 +48,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
 
 
-class Sfide(models.Model):
-    "Sfide object."
+class Level(models.Model):
+    """Model representing a level in the game."""
+
     name = models.CharField(max_length=255)
-    difficulty = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -62,8 +62,8 @@ class Sfide(models.Model):
         """
 
 
-class Level(models.Model):
-    """Model representing a level in the game."""
+class Categories(models.Model):
+    """Model representing a category."""
 
     name = models.CharField(max_length=255)
 
@@ -71,10 +71,13 @@ class Level(models.Model):
         return self.name
 
 
-class Categories(models.Model):
-    """Model representing a category."""
-
+class Challenge(models.Model):
     name = models.CharField(max_length=255)
+    difficulty = models.IntegerField(null=False)
+    level = models.ForeignKey(Level, on_delete=models.CASCADE, null=False)
+    category = models.ForeignKey(
+        Categories, on_delete=models.CASCADE, null=False)
+    photo_link = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.name
