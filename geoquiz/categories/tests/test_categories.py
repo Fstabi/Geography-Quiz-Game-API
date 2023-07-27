@@ -74,7 +74,8 @@ class PrivateCategorieAPITests(TestCase):
 
         self.client.force_authenticate(user=self.user)
         res = self.client.patch(
-            reverse('categories:categories-detail', args=[categorie.id]), payload)
+            reverse('categories:categories-detail',
+                    args=[categorie.id]), payload)
 
         self.assertEqual(res.status_code, status.HTTP_403_FORBIDDEN)
 

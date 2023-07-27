@@ -71,7 +71,7 @@ class Categories(models.Model):
         return self.name
 
 
-class Challenge(models.Model):
+class Challenges(models.Model):
     name = models.CharField(max_length=255)
     difficulty = models.IntegerField(null=False)
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=False)

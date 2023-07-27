@@ -7,5 +7,6 @@ class ChallengesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Challenges
-        fields = ['id', 'name', 'diffculty', 'level', 'category', 'photo_link']
+        fields = ['id', 'name', 'difficulty',
+                  'level', 'category', 'photo_link']
         read_only_fields = ['id']
