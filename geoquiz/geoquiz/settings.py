@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'user',
     'levels',
     'categories',
-    'challenges'
+    'challenges',
+    'capitalname'
 ]
 
 MIDDLEWARE = [

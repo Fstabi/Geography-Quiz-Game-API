@@ -81,3 +81,12 @@ class Challenges(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class CapitalName(models.Model):
+    country_name = models.CharField(max_length=100)
+    capital_name = models.CharField(max_length=100)
+    difficulty = models.IntegerField()
+
+    def __str__(self):
+        return self.country_name
