@@ -77,7 +77,7 @@ class Challenges(models.Model):
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=False)
     category = models.ForeignKey(
         Categories, on_delete=models.CASCADE, null=False)
-    photo_link = models.CharField(max_length=1000)
+    photo_link = models.CharField(max_length=1000, blank=True)
 
     def __str__(self):
         return self.name
