@@ -77,6 +77,9 @@ class Challenges(models.Model):
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=False)
     category = models.ForeignKey(
         Categories, on_delete=models.CASCADE, null=False)
+    lat = models.CharField(max_length=50, blank=True)
+    long = models.CharField(max_length=50, blank=True)
+    coordinates = models.TextField(blank=True)
     photo_link = models.CharField(max_length=1000, blank=True)
 
     def __str__(self):
